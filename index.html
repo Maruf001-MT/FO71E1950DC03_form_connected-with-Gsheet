@@ -27,6 +27,7 @@
 </head>
 
 <body>
+    <form method="POST" action="https://script.google.com/macros/s/AKfycby7THeh2jJIpHEQsIuKNh2lNAlFxirpRCgUcqz7er4MbhAjUJCotC0zwfXOFmwBHrKCuw/exec">
     <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
         <div class="wrapper wrapper--w790">
             <div class="logo">
@@ -38,7 +39,7 @@
                     <h2 class="title">REGISTER FOR YOUR ORDER</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST">
+
                         <div class="form-row">
                             <div class="name">Restaurant:</div>
                             <div class="value">
@@ -46,9 +47,9 @@
                                     <div class="rs-select2 js-select-simple select--no-search">
                                         <select name="restaurant">
                                             <option disabled="disabled" selected="selected">Choose option</option>
-                                            <option>Restaurant: 1</option>
-                                            <option>Restaurant: 2</option>
-                                            <option>Restaurant: 3</option>
+                                            <option value="Restaurant: 1">Restaurant: 1</option>
+                                            <option value="Restaurant: 2">Restaurant: 2</option>
+                                            <option value="Restaurant: 3">Restaurant: 3</option>
                                         </select>
                                         <div class="select-dropdown"></div>
                                     </div>
@@ -115,8 +116,6 @@
                             </div>
                         </div>
                         
-                       
-                    </form>
                 </div>
             </div>
 
@@ -125,8 +124,7 @@
                     <h2 class="title">PLACE YOUR ORDER</h2>
                 </div>
                 <div class="card-body">
-                    
-                    <form method="POST">
+
                         <p>When inputting your order, please use the exact language from the restauarnt's website/menu. If you have any special request, please provide in the additional boxes</p>
                         <div class="confirmation-box">
                             <p>To order, please check box to confirm that you have read all the rules. The cost submitted will be submitted to restaurant for pre-approval. All communication will done by sms and email</p>
@@ -137,7 +135,6 @@
                                 </label>
                             </div>
                         </div>
-                    </form>
                 </div>
             </div>
             <div class="card card-5">
@@ -145,7 +142,7 @@
                     <h2 class="title">PERSON/ENTRÉE #1</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST">
+
                         <div class="form-row m-b-55">
                             <div class="name">Copy and paste or type your first entrée here. If it is a combo, be sure to mention "combo" in the order box:</div>
                             <div class="value">
@@ -349,7 +346,6 @@
                             </div>
                         </div>
 
-                    </form>
                 </div>
             </div>
 
@@ -359,7 +355,6 @@
                     <h2 class="title">PERSON/ENTRÉE #2</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST">
                         <div class="form-row m-b-55">
                             <div class="name">Copy and paste or type your first entrée here. If it is a combo, be sure to mention "combo" in the order box:</div>
                             <div class="value">
@@ -566,7 +561,6 @@
                             </div>
                         </div>
 
-                    </form>
                 </div>
             </div>
 
@@ -577,7 +571,7 @@
                     <h2 class="title">PERSON/ENTRÉE #3</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST">
+
                         <div class="form-row m-b-55">
                             <div class="name">Copy and paste or type your first entrée here. If it is a combo, be sure to mention "combo" in the order box:</div>
                             <div class="value">
@@ -859,11 +853,11 @@
                             <button class="btn btn--radius-2 btn--red" type="button">Submit My Order</button>
                         </div>
 
-                    </form>
                 </div>
             </div>
         </div>
     </div>
+</form>
 
     <script src="js/calculation.js"></script>
     <script src="js/gsheet_connect.js"></script>
