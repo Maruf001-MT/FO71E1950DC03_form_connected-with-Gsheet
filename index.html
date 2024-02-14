@@ -27,7 +27,7 @@
 </head>
 
 <body>
-    <form method="POST" action="https://script.google.com/macros/s/AKfycby7THeh2jJIpHEQsIuKNh2lNAlFxirpRCgUcqz7er4MbhAjUJCotC0zwfXOFmwBHrKCuw/exec">
+    <form method="POST" id="myForm">
     <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
         <div class="wrapper wrapper--w790">
             <div class="logo">
@@ -858,6 +858,33 @@
         </div>
     </div>
 </form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('myForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
+    
+            var formData = new FormData(this);
+            
+            // Convert formData to a query string
+            var queryString = new URLSearchParams(formData).toString();
+    
+            fetch('https://script.google.com/macros/s/AKfycby7THeh2jJIpHEQsIuKNh2lNAlFxirpRCgUcqz7er4MbhAjUJCotC0zwfXOFmwBHrKCuw/exec', {
+                method: 'POST',
+                mode: 'no-cors', // Prevents CORS errors
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: queryString
+            })
+            .then(response => {
+                window.location.href = 'success.html'; // Redirect to thanks.html on success
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    });
+    </script>
+    
 
     <script src="js/calculation.js"></script>
     <script src="js/gsheet_connect.js"></script>
